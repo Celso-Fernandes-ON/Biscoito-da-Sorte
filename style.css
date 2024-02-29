@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --tt-color:#34355B;
+}
+body{
+    background: linear-gradient(45deg, #BB00FF, #190361, #FF9500, #23d5ab)no-repeat;
+    background-size: 300% 300%;
+    animation: back-style 10s ease-in-out infinite alternate;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+main{
+    width: min(42.8rem, 90%);
+    margin: -10rem auto 0;
+    text-align: center;
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 5rem black;
+    padding: 4.8rem 6.4rem 6.4rem;
+}
+h2, p{
+    color: var(--tt-color);
+}
+h2{
+    font-size: 2.4rem;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 1.4rem;
+}
+p, button{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+}
+p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+#cookie-close:hover{
+    animation: move-cookie .15s infinite;
+}
+#res{
+    animation: scale-up 2s forwards ease-out;
+}
+#res-field{
+    animation: slide-up 2s forwards ease-out;
+}
+.hide{
+    display: none;
+}
+
+/* -------screen 2------------------------------------------ */
+
+button{
+    color: white;
+    background-color: #FF9500;
+    padding: 1.6rem;
+    border-radius: .4rem;
+    border: none;
+}
+button:hover{
+    background-color: #a15e01;
+}
+#res{
+    font-size: 2.4rem;
+    font-family: "Dancing Script", cursive;
+
+    padding: 1rem;
+    background-color: #E4EDF1;
+
+    box-shadow: .2rem .2rem .2rem rgb(128, 128, 128);
+}
+/* -------Animations------------------------------------------ */
+@keyframes slide-up {
+    0%{
+        transform: translateY(15rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+@keyframes scale-up {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+@keyframes move-cookie {
+    0%{
+        transform: translate3d(0);
+    }
+    25%{
+        transform: translate3d(0,-.2rem,0);
+    }
+    50%{
+        transform: translate3d(-.9rem,0,0);
+    }
+    75%{
+        transform: translate3d(0,0,-.5rem);
+    }
+    
+}
+@keyframes back-style {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+}
